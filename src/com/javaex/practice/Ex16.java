@@ -1,5 +1,7 @@
 package com.javaex.practice;
 
+import java.util.Scanner;
+
 public class Ex16 {
 	/*아래와 설명에 맞는 프로그램을 작성하세요
 	 숫자를 1개 입력 받아 입력한 수의 약수를 모두 출력하세요
@@ -7,6 +9,31 @@ public class Ex16 {
 	 */
 
 	public static void main(String[] args) {
+		
+		
+		int num = 0;
+		int count = 0;
+		int multi5 = 0;
+		
+		Scanner sc = new Scanner(System.in);
+		
+		System.out.print("숫자를 입력하세요: ");
+		
+		num = sc.nextInt();
+		
+		for(int i = 1; i<=num; i++) {
+			
+			if(i%5==0) {
+				count++;
+				multi5 = multi5 + i;
+				
+			}
+		
+		}
+		System.out.println("5의배수의 개수 : "+ count);
+		System.out.println("5의배수의 합  : "+ multi5);
+		
+		sc.close();
 
 	}
 
